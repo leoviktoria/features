@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.but {
+    width: 150px;
+    height: 49px;
+    display: block;
+    background-color: #252525;
+    text-align: center;
+    position: relative;
+    margin: 20px;
+}
+.text {
+    position: absolute;
+    top:10px;
+    left:25px;
+    color: #ffffff;
+}
+.but:hover {
+    background-color: #2e8a7d;
+}
+.but2 {
+	width: 150px;
+    height: 49px;
+    display: block;
+    background-color: #252525;
+    text-align: center;
+    position: relative;
+    margin: 20px;
+    z-index: 1;
+}
+.text2 {
+    position: absolute;
+    top:10px;
+    left:25px;
+    color: #ffffff;
+}
+.but2:hover::before{
+	width: 150px;
+	color: #700;
+}
+.but2::before{
+	transition-timing-function: linear;
+	transition-duration: 250ms;
+    content: '';
+    z-index:0;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0px;
+    left: 0px;
+    height: 100%; width: 0;
+    background: #2e8a7d; /* Фон */
+}
+
+	</style>
+
+</head>
+<body>
+    <div class="button">
+        <a class="but" href="#"><span class="text" >READ MORE</span></a>
+    </div>
+    <div class="button2">
+        <a class="but2" href="#"><span class="text2">READ MORE</span></a>
+    </div>    
+</body>
+</html>
